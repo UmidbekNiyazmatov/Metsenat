@@ -1,37 +1,24 @@
 <script setup>
-
-
-import Navbar from "../components/Navbar/Navbar.vue"
-
-
+import { RouterView } from "vue-router";
+import Navbar from "../components/Navbar/Navbar.vue";
 
 </script>
-
 <template>
   <div>
-    <Navbar/>
-    <slot/>
-    
-  </div>
-<!--  
-<div class="bg-slate-100"  >
-    
-    <Navbar/>
-  
-    
+    <!-- <Navbar />
+    <main>
+      <router-view />
+    </main>
+    <Footer /> -->
+
+    <Navbar />
     <main>
       <RouterView v-slot="{ Component }">
         <component :is="Component" />
       </RouterView>
     </main>
-
-    <Footer />
    
-  </div> -->
-
-
+  </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
