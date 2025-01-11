@@ -1,39 +1,33 @@
-<script>
-import Seorch from "../Form/Sorch.vue"
+<script setup >
+import Search from "../Form/Search.vue"
 
-  export default {
-    name: "Navigation",
-    components: {
-    Seorch,
 
-  },
-  };
+
 
 </script>
 <template>
     <nav class=" bg-gray-50   ">
       <div class="container    ">
         <div class="flex justify-between py-5 ">
-        <ul class="flex space-x-6">
-          <li>
+       
+          <div>
+            <router-link to="/">
             <button
-              class="py-2 px-4 text-blue-600 border-b-4 border-blue-600 font-medium"
+              class="py-2 px-10 border-2 rounded-l-lg  text-blue-600  active:  active:text-white  active:bg-blue-600 active:border-blue-600 font-medium"
             >
               DASHBOARD
             </button>
-          </li>
-          <li>
-            <button class="py-2 px-4 text-gray-600 hover:text-blue-600">
+          </router-link>
+            <router-link to="/homiylar">
+            <button class="py-2 px-10 border-2 text-blue-600   active:text-white  active:bg-blue-600 active:border-blue-600 font-medium">
               HOMIYLAR
             </button>
-          </li>
-          <li>
-            <button class="py-2 px-4 text-gray-600 hover:text-blue-600">
+          </router-link>
+            <button class="py-2 px-10 border-2 text-blue-600   active:text-white  active:bg-blue-600 active:border-blue-600 font-medium">
               TALABALAR
             </button>
-          </li>
-        </ul>
-        <Seorch />
+          </div>
+        <Search />
     </div>
       </div>
       

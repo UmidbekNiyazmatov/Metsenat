@@ -13,14 +13,11 @@ const routes = createRouter({
           name: "home",
           component:() => import("../views/HomeView.vue")
         },
-        // {
-        //   path: '/',
-        //   name: 'home',
-        //   meta:{
-        //     layout: "default",
-        //   },
-        //   component:() => import("../views/HomeView.vue")
-        // },
+        {
+          path: "/homiylar",
+          name: "homiylarPage",
+          component:() => import("../views/HomiylarView.vue")
+        },
       ]}
     
   ],

@@ -1,10 +1,12 @@
-// import axios from 'axios'
-// const access = window.localStorage.getItem(access);
+import axios from "axios";
 
-// const client = axios.create({
-//     baseURL: ' https://metsenatclub.xn--h28h.uz/',
-//     headers: {Authorization: `${access}`}
-// })
+const accessToken = window.localStorage.getItem('access');
 
-// export default client
+const client = axios.create({
+  baseURL: 'https://metsenatclub.xn--h28h.uz/api/v1/',
+  headers: { 
+    Authorization: `Bearer ${accessToken}`
+  }
+});
 
+export default client;

@@ -1,7 +1,7 @@
 <template>
     <div class="flex items-center  ">
        
-        <span class="icon-search text-2xl text-gray-300 right-[575px] absolute z-10 " ></span>
+        <span class="icon-search text-2xl text-gray-300 right-[600px] absolute z-10 " ></span>
       <input
         type="search"
         placeholder="Izlash"
@@ -15,8 +15,6 @@
     </div>
   </template>
   
-  <script>
-  export default {
-    name: "SearchFilter",
-  };
+  <script setup >
+
   </script>

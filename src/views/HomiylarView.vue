@@ -2,7 +2,7 @@
 
 import Header from "../components/Header/Header.vue";
 
-import CPay from "../components/Dashboard/CPey.vue"
+
 
 </script>
 
@@ -17,7 +17,7 @@ import CPay from "../components/Dashboard/CPey.vue"
     <main class="container mx-auto px-4 py-6">
 
  
-      <CPay />
+      
 
       
     </main>

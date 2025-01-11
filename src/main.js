@@ -1,17 +1,21 @@
 import './assets/main.css'
-import './assets/icomoon (1)/style.css'; // IcoMoon CSS faylini import qilish
+import './assets/icomoon (1)/style.css'; 
 import { createApp } from 'vue'
+import Vue3Autocounter from 'vue3-autocounter';
+
 import App from './App.vue'
 import router from './router'
-import axios from 'axios';                 // Axios HTTP so'rovlarini yuborish uchun
 
 
-// import client from './api/api';   
+
+
 
 const app = createApp(App)
 
+app.component('vue3-autocounter', Vue3Autocounter)
+
 app.use(router)
 
-app.config.globalProperties.$axios = axios;
+
 
 app.mount('#app')
