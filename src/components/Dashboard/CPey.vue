@@ -1,3 +1,24 @@
+<script setup>
+import CPaylList from './CPayList.vue'
+import client from '../../api/api'
+import { onMounted, ref } from 'vue'
+
+let dashboardResult = ref({})
+
+const GetPay = async () => {
+  try {
+    const data = await client.get('dashboard/')
+    dashboardResult.value = data.data
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+onMounted(() => {
+  GetPay()
+})
+</script>
+
 <template>
 
     <section class="mt-12 pay">
@@ -28,24 +49,3 @@
       </div>
     </section>
   </template>
-  <script setup>
-  import CPaylList from './CPayList.vue'
-  import client from '../../api/api'
-  import { onMounted, ref } from 'vue'
-  
-  let dashboardResult = ref({})
-  
-  const GetPay = async () => {
-    try {
-      const data = await client.get('dashboard/')
-      dashboardResult.value = data.data
-    } catch (error) {
-      console.log(error)
-    }
-  }
-  
-  onMounted(() => {
-    GetPay()
-  })
-  </script>
-  

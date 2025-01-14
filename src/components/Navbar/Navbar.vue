@@ -1,29 +1,30 @@
+<script setup >
+import CButton from "../Form/Button.vue"
+</script>
 <template>
-   <header class="bg-white shadow">
+   <header class="bg-white py-3 shadow">
      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
        <div class="flex items-center space-x-4">
          <img src="/public/Logo.png" alt="Metsenat Pro" class="h-8" />
-         <!-- <h1 class="text-xl font-bold text-gray-800">
-           METSENAT <span class="text-green-600">PRO</span>
-         </h1> -->
+     
        </div>
        <div class="flex items-center gap-16">
          
-         <div class="flex items-center bg-gray-200 rounded-lg p-1  ">
-           <span class="px-5" >Shohruh</span>
-           <span  class=" icon-user text-white  text-2xl bg-green-600  p-2 rounded-lg "></span>
-           <!-- <img src="avatar-placeholder.png" alt="User avatar" class="w-8 h-8 rounded-full" /> -->
-         </div>
-         <button class=" rounded- text-gray-400 hover:text-gray-800">
-           <span class="icon-log-out text-4xl " ></span>
-         </button>
+      
+         <CButton  variant="user" title="Shoxrux">
+              <template #suffix>
+                  <span class="icon-user text-3xl text-white bg-[#00AE69] px-1 pt-2 rounded"></span>
+              </template>
+         </CButton>
+
+         <CButton  variant="" title="">
+              <template #suffix>
+                  <span class="icon-log-out text-4xl text-[#B1B1B8] "></span>
+              </template>
+         </CButton>
+         
        </div>
      </div>
    </header>
  </template>
  
- <script>
- export default {
-   name: "Header",
- };
- </script>

@@ -4,6 +4,8 @@ import Header from "../components/Header/Header.vue";
 
 import CPay from "../components/Dashboard/CPey.vue"
 
+import CChart from "@/components/Dashboard/CChart.vue";
+
 </script>
 
 <template>
@@ -21,5 +23,6 @@ import CPay from "../components/Dashboard/CPey.vue"
 
       
     </main>
+    <CChart />
   </div>
 </template>

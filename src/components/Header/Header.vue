@@ -1,36 +1,49 @@
-<script setup >
+<script setup>
 import Search from "../Form/Search.vue"
 
-
+import CButton from "../Form/Button.vue"
 
 
 </script>
 <template>
-    <nav class=" bg-gray-50   ">
-      <div class="container    ">
-        <div class="flex justify-between py-5 ">
-       
-          <div>
-            <router-link to="/">
-            <button
-              class="py-2 px-10 border-2 rounded-l-lg  text-blue-600  active:  active:text-white  active:bg-blue-600 active:border-blue-600 font-medium"
-            >
+  <nav class=" bg-gray-50   ">
+    <div class="container    ">
+      <div class="flex justify-between py-5 ">
+
+        <div>
+          <router-link to="/">
+            <button :class="{ 'bg-[#3366FF] border-[#3366FF]  text-white': $route.path === '/' }"
+              class="py-2 px-10 border-2 rounded-l-lg  text-blue-600  font-medium">
               DASHBOARD
             </button>
           </router-link>
-            <router-link to="/homiylar">
-            <button class="py-2 px-10 border-2 text-blue-600   active:text-white  active:bg-blue-600 active:border-blue-600 font-medium">
+          <router-link to="/homiylar">
+            <button :class="{ 'bg-[#3366FF] border-[#3366FF]  text-white': $route.path === '/homiylar' }"
+              class="py-2 px-10 border-2 text-blue-600   font-medium">
               HOMIYLAR
             </button>
           </router-link>
-            <button class="py-2 px-10 border-2 text-blue-600   active:text-white  active:bg-blue-600 active:border-blue-600 font-medium">
+          <router-link to="/#">
+            <button :class="{ 'bg-[#3366FF] border-[#3366FF]  text-white': $route.path === '/#' }"
+              class="py-2 px-10 border-2 rounded-r-lg text-blue-600   font-medium">
               TALABALAR
             </button>
-          </div>
-        <Search />
-    </div>
+          </router-link>
+        </div>
+        <div class="flex items-center gap-5">
+          <Search  type="search" placeholder="Izlash" class="">
+          <template #left>
+              <span class="icon-search text-2xl text-gray-300 pl-3 pt-3 absolute  z-10" ></span>
+          </template>
+          </Search>
+          <CButton variant="filter" title="Filter">
+            <template #prefix>
+              <span class="icon-filtr text-xl"></span>
+            </template>
+          </CButton>
+        </div>
       </div>
-      
-    </nav>
+    </div>
+
+  </nav>
 </template>
-  

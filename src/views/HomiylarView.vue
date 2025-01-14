@@ -1,7 +1,7 @@
 <script setup >
 
 import Header from "../components/Header/Header.vue";
-
+import Sponsor from "@/components/Sponsor/Sponsor.vue";
 
 
 </script>
@@ -17,7 +17,7 @@ import Header from "../components/Header/Header.vue";
     <main class="container mx-auto px-4 py-6">
 
  
-      
+      <Sponsor />
 
       
     </main>
