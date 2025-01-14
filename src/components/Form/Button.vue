@@ -29,7 +29,7 @@ const buttonColor = computed(() => {
  <div>
   <div :class="buttonColor">
     <slot name="prefix"></slot>
-    <button @click="$emit('onSubmit')">
+    <button >
         {{ title }}
     </button>
     <slot name="suffix"></slot>

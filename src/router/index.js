@@ -18,6 +18,13 @@ const routes = createRouter({
           name: "homiylarPage",
           component:() => import("../views/HomiylarView.vue")
         },
+        {
+          path: "/sponsorSingle",
+          name: "sponsorSingle",
+          component:() => import("../views/SponsorSingle.vue")
+        },
+
+        
       ]}
     
   ],
