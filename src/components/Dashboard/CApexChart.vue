@@ -81,22 +81,25 @@
 </template>
 
 <style scoped>
-    .apexchart-style ::v-deep(.apexcharts-toolbar) {
-        display: none !important;
-    }
-    .apexchart-style ::v-deep(.apexcharts-legend) {
-        display: none !important;
-    }
-    .apexchart-style ::v-deep(.apexcharts-tooltip){
-        border-radius: 8px !important;
-        border: 1px solid #dfe6fe !important;
-        background: linear-gradient(180deg, #f3f4fe 0%, rgba(243,244,254,0) 100%) !important;
-        backdrop-filter: blur(5px) !important;
-        width: 128px !important;
-    }
-    .apexchart-style ::v-deep(.apexcharts-tooltip-title) {
-        background-color: transparent !important;
-        font-family: 'Rubik' !important;
-    }
-   
+.apexchart-style ::v-deep(.apexcharts-toolbar) {
+    display: none !important;
+  }
+  
+  .apexchart-style ::v-deep(.apexcharts-legend) {
+    display: none !important;
+  }
+  
+  .apexchart-style ::v-deep(.apexcharts-tooltip) {
+    border-radius: 8px !important;
+    border: 1px solid #dfe6fe !important;
+    background: linear-gradient(180deg, #f3f4fe 0%, rgba(243, 244, 254, 0) 100%) !important;
+    backdrop-filter: blur(5px) !important;
+    width: 128px !important;
+  }
+  
+  .apexchart-style ::v-deep(.apexcharts-tooltip-title) {
+    background-color: transparent !important;
+    font-family: 'Rubik' !important;
+  }
+  
 </style>

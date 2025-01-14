@@ -13,7 +13,7 @@
     <RouterLink to="/sponsorSingle">
       <div class="flex justify-between bg-white h-[68px] items-center px-[15px] rounded-lg mt-3">
         <div>
-          <ul class="text-[15px] text-[#1D1D1F] flex gap-[33px]">
+          <ul class="text-[15px] text-[#1D1D1F] flex gap-10">
             <li class="font-normal">{{ index + 1 }}</li>
             <li class="font-medium">{{ data.full_name }}</li>
           </ul>
