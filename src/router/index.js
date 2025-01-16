@@ -19,8 +19,8 @@ const routes = createRouter({
           component:() => import("../views/HomiylarView.vue")
         },
         {
-          path: "/sponsorSingle",
-          name: "sponsorSingle",
+          path: "/homiylar/:id",
+          name: "SponsorSingle",
           component:() => import("../views/SponsorSingle.vue")
         },
 

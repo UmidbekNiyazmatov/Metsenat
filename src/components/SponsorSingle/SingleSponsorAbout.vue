@@ -8,21 +8,21 @@
                 </template>
             </CButton>
         </div>
-        <!-- <p>{{ data.phone }}</p> -->
+     
         <div class="flex items-center gap-5">
             <div class="p-5 bg-[#EAECF0] rounded-lg ">
                 <img src="/public/Frame.png" alt="">
             </div>
-            <span class="w-36"> {{ data.full_name }}</span>
+            <span class="w-36"> {{ singleSponsor.full_name }}</span>
         </div>
         <div class="flex items-center">
             <div class="w-full">
                 <div>telefon raqam</div>
-                <span>{{ data.phone }}</span>
+                <span>{{ singleSponsor.phone }}</span>
             </div>
             <div class="w-full">
                 <div>Homiylik summasi</div>
-                <span>    <vue3-autocounter :startAmount="0" :endAmount="data.sum" :duration="1" ref="counter" :decimals="0" separator=" "/>
+                <span>  {{formarPrice(singleSponsor.sum) }}
                     <span class="text-[14px] text-[#B1B1B8]">UZS</span></span>
             </div>
         </div>
@@ -31,15 +31,16 @@
 
 <script setup>
 defineProps({
-    data: {
+    singleSponsor: {
         type: Object,
-        required: true
-    },
-    index: {
-        type: Number,
-        required: false
+        required: true 
     }
 })
+const formarPrice = (value) => {
+      let val = (value / 1).toFixed('UZS').replace(' ', ' ')
+      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+  }
+
 
 import CButton from '../Form/Button.vue'
 

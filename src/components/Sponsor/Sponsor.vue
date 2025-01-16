@@ -47,13 +47,13 @@ const changePageSize = (newSize) => {
 
 
 const toggleRotate = () => {
-  // isRotated.value = !isRotated.value;
+
   isDropdownOpen.value = !isDropdownOpen.value;
 };
 
 
 
-// Dropdown funksionallik
+
 const isDropdownOpen = ref(false);
 
 
