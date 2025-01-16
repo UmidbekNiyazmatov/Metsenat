@@ -1,8 +1,18 @@
 <script setup>
+import { ref } from "vue"
 import Search from "../Form/Search.vue"
-
+import ModalFilter from "../Modal/SponsorFilter.vue"
 import CButton from "../Form/Button.vue"
+      
+const isOpenModal = ref(false)
 
+const openModal = () => {
+    isOpenModal.value = true;
+};
+
+const closeModal = () => {
+    isOpenModal.value = false
+}
 
 </script>
 <template>
@@ -36,12 +46,14 @@ import CButton from "../Form/Button.vue"
               <span class="icon-search text-2xl text-gray-300 pl-3 pt-3 absolute  z-10" ></span>
           </template>
           </Search>
-          <CButton variant="filter" title="Filter">
+          <CButton @click="openModal" variant="filter" title="Filter">
             <template #prefix>
               <span class="icon-filtr text-xl"></span>
             </template>
           </CButton>
+          <ModalFilter :isOpen="isOpenModal" @close="closeModal" class=" z-10 "  />
         </div>
+      
       </div>
     </div>
 
