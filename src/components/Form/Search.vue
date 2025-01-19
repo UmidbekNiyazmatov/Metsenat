@@ -9,7 +9,7 @@
 
       <slot name="left" />
       <input :type="type" :disabled="disabled" :placeholder="placeholder"
-        class="p-3 pl-10 relative w-[300px] bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"  />
+        class="p-3 pl-10 relative w-[300px] bg-gray-100 border border-gray-300 rounded-lg outline-none "  />
       <slot name="right" />
     </div>
   </div>

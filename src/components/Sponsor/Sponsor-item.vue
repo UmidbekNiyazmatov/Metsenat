@@ -10,7 +10,7 @@
 
 <template>
   <div>
-    <RouterLink :to="`/homiylar/${data.id}`">
+    <RouterLink :to="`/Sponsor/${data.id}`">
       <div class="flex justify-between bg-white h-[68px] items-center px-[15px] rounded-lg mt-3">
         <div>
           <ul class="text-[15px] text-[#1D1D1F] flex gap-10">

@@ -27,8 +27,8 @@ const closeModal = () => {
               DASHBOARD
             </button>
           </router-link>
-          <router-link to="/homiylar">
-            <button :class="{ 'bg-[#3366FF] border-[#3366FF]  text-white': $route.path === '/homiylar' }"
+          <router-link to="/Sponsor">
+            <button :class="{ 'bg-[#3366FF] border-[#3366FF]  text-white': $route.path === '/Sponsor' }"
               class="py-2 px-10 border-2 text-blue-600   font-medium">
               HOMIYLAR
             </button>
@@ -41,7 +41,7 @@ const closeModal = () => {
           </router-link>
         </div>
         <div class="flex items-center gap-5">
-          <Search  type="search" placeholder="Izlash" class="">
+          <Search  type="text" placeholder="Izlash" class="">
           <template #left>
               <span class="icon-search text-2xl text-gray-300 pl-3 pt-3 absolute  z-10" ></span>
           </template>

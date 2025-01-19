@@ -14,12 +14,12 @@ const routes = createRouter({
           component:() => import("../views/HomeView.vue")
         },
         {
-          path: "/homiylar",
-          name: "homiylarPage",
-          component:() => import("../views/HomiylarView.vue")
+          path: "/Sponsor",
+          name: "SponsorPage",
+          component:() => import("../views/SponsorView.vue")
         },
         {
-          path: "/homiylar/:id",
+          path: "/Sponsor/:id",
           name: "SponsorSingle",
           component:() => import("../views/SponsorSingle.vue")
         },

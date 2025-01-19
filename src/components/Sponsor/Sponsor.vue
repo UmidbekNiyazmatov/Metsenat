@@ -1,5 +1,6 @@
 <script setup>
 import sponsorItem from "./Sponsor-item.vue";
+import CButton from "../Form/Button.vue"
 import { onMounted, ref } from "vue";
 import client from "../../api/api";
 
@@ -102,17 +103,23 @@ const isDropdownOpen = ref(false);
         <div class="flex items-center gap-2">
           <p>Ko‘rsatish</p>
           <div>
-            <button @click="toggleRotate" class="p-1">regre</button>
-            <div v-if="isDropdownOpen" class="   mt-2 bg-white border rounded-lg shadow-lg z-10 w-auto">
+            
+            <CButton @click="toggleRotate" variant="pageSize" title="10">
+            <template #suffix>
+              <i :class="{ 'rotate-180': isDropdownOpen, '-rotate-0': !isDropdownOpen }"
+                class="icon-angle-down  text-[12px] transition-transform duration-300 ease-in-out  "></i>
+            </template>
+          </CButton>
+            <div v-if="isDropdownOpen" class="   bg-white border rounded-lg shadow-lg z-10 ">
 
-              <div class="absolute">
-                <button class="flex items-center gap-2 px-2 bg-white rounded-md shadow" @click="changePageSize(10)">
+              <div class="absolute ">
+                <button class="flex items-center  gap-2 px-[13px] bg-white rounded-md shadow" @click="changePageSize(10)">
                   <span class="text-lg">10</span>
                 </button>
-                <button class="flex items-center gap-2 px-2 bg-white rounded-md shadow" @click="changePageSize(20)">
+                <button class="flex items-center gap-2 px-[13px] bg-white rounded-md shadow" @click="changePageSize(20)">
                   <span class="text-lg">20</span>
                 </button>
-                <button class="flex items-center gap-2 px-2 bg-white rounded-md shadow" @click="changePageSize(50)">
+                <button class="flex items-center gap-2 px-[13px] bg-white rounded-md shadow" @click="changePageSize(50)">
                   <span class="text-lg">50</span>
                 </button>
               </div>
