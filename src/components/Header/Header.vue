@@ -29,12 +29,12 @@ const closeModal = () => {
           </router-link>
           <router-link to="/Sponsor">
             <button :class="{ 'bg-[#3366FF] border-[#3366FF]  text-white': $route.path === '/Sponsor' }"
-              class="py-2 px-10 border-2 text-blue-600   font-medium">
+              class="py-2 px-10 border-2 border-x-0 text-blue-600   font-medium">
               HOMIYLAR
             </button>
           </router-link>
-          <router-link to="/#">
-            <button :class="{ 'bg-[#3366FF] border-[#3366FF]  text-white': $route.path === '/#' }"
+          <router-link to="/Students">
+            <button :class="{ 'bg-[#3366FF] border-[#3366FF]  text-white': $route.path === '/Students' }"
               class="py-2 px-10 border-2 rounded-r-lg text-blue-600   font-medium">
               TALABALAR
             </button>

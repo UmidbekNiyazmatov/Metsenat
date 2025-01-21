@@ -14,23 +14,46 @@
                 <div class="  bg-white rounded-xl  p-0    ">
                     <hr>
                     <div class=" space-y-5 ">
-                        <div class="space-y-2 pt-5 " >
+                        <div class="space-y-2 pt-5 ">
                             <span> Ariza holati </span>
-                            <div class="flex items-center justify-between bg-[#E0E7FF] p-3 rounded-xl border-2 ">
+                            <div @click="toggleRotate"
+                                class="flex items-center justify-between bg-[#E0E7FF] p-3 rounded-xl border-2 ">
                                 Barchasi
-                                <span class="icon-angle-down  "> </span>
+                                <i :class="{ 'rotate-180': isDropdownOpen, '-rotate-0': !isDropdownOpen }"
+                                    class="icon-angle-down  text-[12px] transition-transform duration-300 ease-in-out  "></i>
                             </div>
+                            <div v-if="isDropdownOpen"
+                                class=" absolute   bg-white border w-[570px]  rounded-xl shadow-lg z-10 ">
+
+                                <div class=" border-b-[2px] p-3 w-full  ">
+                                    Barchasi
+                                </div>
+                                <div class=" border-b-[2px] p-3 w-full  ">
+                                    Yangi
+                                </div>
+                                <div class=" border-b-[2px] p-3 w-full  ">
+                                    Moderatsiyada
+                                </div>
+                                <div class=" border-b-[2px] p-3 w-full  ">
+                                    Tasdiqlangan
+                                </div>
+                                <div class=" border-b-[0px] p-3 w-full  ">
+                                    Bekor qilingan
+                                </div>
+                            </div>
+
+
                         </div>
                         <div class="space-y-2">
                             <span>Homiylik summasi</span>
                             <div class=" grid grid-cols-4 gap-y-3 gap-x-3 ">
                                 <div class="p-4 border-2 text-center rounded-md bg-[#E0E7FF] border-[#2E5BFF] ">Barchasi
                                 </div>
-                                <div class="p-4 border-2 text-center rounded-md ">Barchasi </div>
-                                <div class="p-4 border-2 text-center rounded-md ">Barchasi </div>
-                                <div class="p-4 border-2 text-center rounded-md ">Barchasi </div>
-                                <div class="p-4 border-2 text-center rounded-md ">Barchasi </div>
-                                <div class="p-4 border-2 text-center rounded-md ">Barchasi </div>
+                                <div class="p-4 border-2 text-center rounded-md ">1 000 000 </div>
+                                <div class="p-4 border-2 text-center rounded-md ">5 000 000 </div>
+                                <div class="p-4 border-2 text-center rounded-md "> 7 000 000</div>
+                                <div class="p-4 border-2 text-center rounded-md ">10 000 000 </div>
+                                <div class="p-4 border-2 text-center rounded-md ">30 000 000 </div>
                             </div>
                         </div>
                         <div class="space-y-2 pb-5 ">
@@ -41,8 +64,8 @@
                             </div>
                         </div>
                     </div>
-                    <hr  >
-                    <div class="flex justify-end gap-3 pt-5 " >
+                    <hr>
+                    <div class="flex justify-end gap-3 pt-5 ">
                         <CButton variant="filter" title="Tozalash">
                             <template #prefix>
                                 <span class="icon-broom text-xl"></span>
@@ -64,15 +87,7 @@
 
 import { ref, defineEmits, defineProps, watch } from 'vue';
 import CButton from "../Form/Button.vue"
-const isRotated = ref(false);
 
-const toggleRotate = () => {
-    isRotated.value = !isRotated.value;
-};
-const Rotated = ref(false)
-const Rotate = () => {
-    Rotated.value = !Rotated.value;
-};
 
 const props = defineProps(["isOpen"]);
 const emit = defineEmits(["close"]);
@@ -97,7 +112,11 @@ watch(
     }
 );
 
+const toggleRotate = () => {
 
+    isDropdownOpen.value = !isDropdownOpen.value;
+};
+const isDropdownOpen = ref(false);
 </script>
 
 <style scoped></style>

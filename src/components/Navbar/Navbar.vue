@@ -5,7 +5,7 @@ import CButton from "../Form/Button.vue"
    <header class="bg-white py-3 shadow">
      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
        <div class="flex items-center space-x-4">
-         <img src="/public/Logo.png" alt="Metsenat Pro" class="h-8" />
+         <img src="/public/Logo.svg" alt="Metsenat Pro" class="h-8" />
      
        </div>
        <div class="flex items-center gap-16">

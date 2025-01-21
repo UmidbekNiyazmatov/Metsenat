@@ -23,7 +23,11 @@ const routes = createRouter({
           name: "SponsorSingle",
           component:() => import("../views/SponsorSingle.vue")
         },
-
+        {
+          path: "/Students",
+          name: "StudentsPage",
+          component:() => import("../views/StudentsView.vue")
+        },
         
       ]}
     
