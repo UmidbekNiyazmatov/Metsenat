@@ -1,7 +1,7 @@
 <script setup >
 
 import Header from "../components/Header/Header.vue";
-import Sponsor from "@/components/Sponsor/Sponsor.vue";
+import Students from "../components/Students/Students.vue";
 
 
 </script>
@@ -17,7 +17,7 @@ import Sponsor from "@/components/Sponsor/Sponsor.vue";
     <main class="container mx-auto px-4 py-6">
 
  
-      <h1 class="text-6xl  text-center p-[20%]" >Students</h1>
+      <Students />
 
       
     </main>

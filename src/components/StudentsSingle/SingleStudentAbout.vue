@@ -5,7 +5,7 @@ import SSingleModal from "../Modal/SSingleModal.vue";
 import CButton from "../Form/Button.vue";
 
 defineProps({
-  singleSponsor: {
+ singleStudent: {
     type: Object,
     required: true,
   },
@@ -47,26 +47,26 @@ const closeModal = () => {
       <div class="p-5 bg-[#EAECF0] rounded-lg">
         <img src="/public/Frame.png" alt="" />
       </div>
-      <span class="w-36"> {{ singleSponsor.full_name }}</span>
+      <span class="w-36"> {{ singleStudent.full_name }}</span>
     </div>
     <div class=" items-center grid grid-cols-2 gap-y-5 ">
       <div class="w-full">
         <div>telefon raqam</div>
-        <span>{{ singleSponsor.phone }}</span>
+        <span>{{ singleStudent.phone }}</span>
       </div>
       <div class="w-full">
         <div>Homiylik summasi</div>
         <span>
-          {{ formarPrice(singleSponsor.sum) }}
+          {{ formarPrice(singleStudent.sum) }}
           <span class="text-[14px] text-[#B1B1B8]">UZS</span></span>
       </div>
-      <div v-if="singleSponsor.firm == ''" class="w-full ">
+      <div v-if="singleStudent.firm == ''" class="w-full ">
       
       </div>
       <div v-else class="w-full ">
         <div>Tashkilot nomi</div>
 
-{{ singleSponsor.firm }}
+{{ singleStudent.firm }}
       </div>
     </div>
   </div>

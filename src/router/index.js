@@ -28,6 +28,11 @@ const routes = createRouter({
           name: "StudentsPage",
           component:() => import("../views/StudentsView.vue")
         },
+        {
+          path: "/Students/:id",
+          name: "StudentsSingle",
+          component:() => import("../views/StudentsSingle.vue")
+        },
         
       ]}
     
