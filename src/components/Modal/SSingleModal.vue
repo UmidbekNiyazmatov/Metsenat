@@ -10,7 +10,7 @@ const props = defineProps({
   },
   isOpen: {
     type: Boolean,
-    default: false, // Ensuring isOpen defaults to false if not passed
+    default: false, 
   },
 });
 

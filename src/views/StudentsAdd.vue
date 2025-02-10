@@ -1,10 +1,10 @@
 <template>
-    <div class="bg-[#F5F5F7] " >
-        <StudentHeader :singleStudent="singleStudent" />
+    <div class="bg-[rgb(245,245,247)] " >
+        <StudentAddHeader :singleStudent="singleStudent" />
 
         <div class="flex justify-center items-center ">
         
-              <SingleStudentAbout :singleStudent="singleStudent" />
+              <StudentAddAbout :singleStudent="singleStudent" />
            
         </div>
 
@@ -17,8 +17,8 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
-import StudentHeader from '../components/StudentsSingle/Header-single.vue';
-import SingleStudentAbout from '../components/StudentsSingle/SingleStudentAbout.vue';
+import StudentAddHeader from '../components/StudentAdd/StudentAddHeader.vue';
+import StudentAddAbout from '../components/StudentAdd/StudentAddAbout.vue';
 import client from '../api/api';
 
 const route = useRoute();

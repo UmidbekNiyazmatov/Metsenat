@@ -33,6 +33,11 @@ const routes = createRouter({
           name: "StudentsSingle",
           component:() => import("../views/StudentsSingle.vue")
         },
+        {
+          path: "/StudentsAdd/",
+          name: "StudentsAdd",
+          component:() => import("../views/StudentsAdd.vue")
+        },
         
       ]}
     
