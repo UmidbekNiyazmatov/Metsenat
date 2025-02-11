@@ -46,11 +46,11 @@ const saveData = async () => {
   try {
     const response = await client.put(`/sponsor-update/${props.singleSponsor.id}/`, props.singleSponsor);
     console.log("Muvaffaqiyatli saqlandi:", response.data);
-    // alert("Muvaffaqiyatli saqlandi!"); // Replace with a better UI feedback mechanism
+
     closeModal();
   } catch (error) {
     console.error("Saqlashda xatolik:", error);
-    alert("Saqlashda xatolik yuz berdi!"); // Replace with a better UI feedback mechanism
+    alert("Saqlashda xatolik yuz berdi!"); 
   }
 };
 

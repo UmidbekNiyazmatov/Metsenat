@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import SSingleModal from "../Modal/SSingleModal.vue";
+import SSingleModal from "../Modal/SStudentModal.vue";
 
 import CButton from "../Form/Button.vue";
 
@@ -25,7 +25,6 @@ const closeModal = () => {
     isOpenModal.value = false
 }
 
-// const isFirm = ref( !!singleSponsor.firm);
 
 
 
@@ -41,7 +40,7 @@ const closeModal = () => {
                     </template>
                 </CButton>
 
-                <SSingleModal :isOpen="isOpenModal" @close="closeModal" :singleSponsor="singleSponsor" class="z-10" />
+                <SSingleModal :isOpen="isOpenModal" @close="closeModal" :singleStudent="singleStudent" class="z-10" />
             </div>
             <div class="flex items-center">
                 <div class=" flex justify-center w-[200px]     text-[#3366FF] bg-[#E5EBFF]">Asosiy ma’lumotlar </div>
@@ -109,7 +108,7 @@ const closeModal = () => {
                     </template>
                 </CButton>
 
-                <SSingleModal :isOpen="isOpenModal" @close="closeModal" :singleSponsor="singleSponsor" class="z-10" />
+                <SSingleModal :isOpen="isOpenModal" @close="closeModal" :singleStudent="singleStudent" class="z-10" />
             </div>
 
 
