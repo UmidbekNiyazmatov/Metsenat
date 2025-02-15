@@ -4,7 +4,7 @@
 
         <div class="flex justify-center items-center ">
         
-              <StudentAddAbout :singleStudent="singleStudent" />
+              <StudentAddAbout  />
            
         </div>
 

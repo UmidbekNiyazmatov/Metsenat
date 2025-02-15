@@ -66,7 +66,7 @@ const closeModal = () => {
                     <div class="w-full">
                         <div>OTM</div>
                         <span>
-                            {{ singleStudent.institute }}
+                            {{ singleStudent.institute['name'] }}
                         </span>
                     </div>
                     <div class="w-full">
